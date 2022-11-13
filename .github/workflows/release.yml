@@ -10,8 +10,8 @@ on:
 env:
   GH_USER: lucystevens
   DOCKERHUB_USERNAME: lucystevens
-  PROJECT_NAME: react-template
-  PORT: 8005
+  PROJECT_NAME: lucystevens-ui
+  PORT: 8006
 
 jobs:
   build:

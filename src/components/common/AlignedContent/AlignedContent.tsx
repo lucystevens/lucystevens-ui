@@ -1,5 +1,4 @@
 import React from 'react'
-import { Box } from '@mui/material';
 import './AlignedContent.scss';
 
 interface AlignedContentProps {
@@ -19,11 +18,11 @@ export const AlignedContent: React.FC<AlignedContentProps> = ({ vAlign, hAlign, 
     let sizeClass = fullSize? "fullsize" : ""
 
     return (
-        <Box 
+        <div 
             className={`AlignedContent ${sizeClass}`} 
             style={{justifyContent: justifyContent, alignItems: alignItems}}>
             { children }
-        </Box>
+        </div>
     )
 
 }

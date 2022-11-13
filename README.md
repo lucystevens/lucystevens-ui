@@ -1,4 +1,4 @@
-# react-template
+# lucystevens-ui
 This is a template repo for creating a React app.
 
 ## Setup steps

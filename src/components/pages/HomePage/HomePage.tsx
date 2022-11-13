@@ -1,5 +1,4 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material';
 import { AlignedContent, ImageBackground } from 'components/common';
 import './HomePage.scss'
 
@@ -7,18 +6,22 @@ export const HomePage: React.FC = () => {
 
     return (  
         <div className="HomePage">
-            <ImageBackground backgroundImage="images/background.png" maskOpacity={0.5}>
-                <AlignedContent fullSize={true}>
-                    <Box className="homepage-box align-center">
-                        <Typography className="title" variant={"h1"}>
-                            react-template
-                        </Typography>
-                        <Typography className="subtitle" variant={"h2"}>
-                            A homepage for your site
-                        </Typography>
-                    </Box>
-                </AlignedContent>
-            </ImageBackground>
+            <AlignedContent fullSize={true}>
+                <div className="homepage-box">
+                    <div className="profile">
+                        <div className="image"></div>
+                        <div className="text">
+                            <h1 className="name">Lucy Stevens</h1>
+                            <h3 className="role">Full stack Software Engineer</h3>
+                            <p className="text">
+                            An experienced full stack software engineer, specialising 
+                            in designing and developing resilient systems using micro-services.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </AlignedContent>
         </div> 
     );
 
