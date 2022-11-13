@@ -17,13 +17,13 @@ export const HomePage: React.FC = () => {
                         in designing and developing resilient systems using micro-services.
                     </p>
                     <div className="icons">
-                        <a href="mailto:lcm.stevens96@gmail.com" target="_blank">
+                        <a href="mailto:lcm.stevens96@gmail.com" target="_blank" rel="noreferrer">
                             <i className="fa-solid fa-envelope"></i>
                         </a>
-                        <a href="https://github.com/lucystevens" target="_blank">
+                        <a href="https://github.com/lucystevens" target="_blank" rel="noreferrer">
                             <i className="fa-brands fa-github"></i>
                         </a>  
-                        <a href="https://linkedin.com/in/lucycmstevens" target="_blank">
+                        <a href="https://linkedin.com/in/lucycmstevens" target="_blank" rel="noreferrer">
                             <i className="fa-brands fa-linkedin"></i>
                         </a>
                         <a href="/files/cv.pdf" download="Lucy Stevens CV.pdf">
