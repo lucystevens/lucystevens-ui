@@ -1,5 +1,5 @@
 .HomePage {
-    width: 80%; // TODO change for mobile
+    width: 80%;
     margin-top: 20px;
 
     .profile {
@@ -9,6 +9,7 @@
 
         .image {
             display: flex;
+
             width: 200px;
             height: 200px;
             margin-left: 20px;
@@ -20,7 +21,7 @@
         }
 
         .text {
-            width: 50%;
+            max-width: 500px;
             text-align: right;
 
             display: flex;
@@ -61,18 +62,28 @@
             margin-bottom: 20px;
         }
     }
+}
 
+@media (max-width: 600px) {
+    .HomePage {
+        width: 100%;
+        margin: 20px;
 
-    @media (max-width: 1366px) {
-        .homepage-box {
-            width: 75%;
-        }
-    
-    }
+        .profile {
+            .image {
+                width: 80px;
+                height: 80px;
+            }
+            .text {
+                max-width: 60%;
+                margin-right: 20px;
 
-    @media (max-width: 425px) {
-        .homepage-box {
-            width: 90%;
+                .icons {
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
 }
