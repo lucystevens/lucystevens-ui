@@ -1,0 +1,10 @@
+.ImageBackground {
+    flex: 1 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .mask {
+        height: 100%;
+    }
+}

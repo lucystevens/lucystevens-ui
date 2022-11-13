@@ -1,0 +1,162 @@
+.NavigationBar {
+  padding-right: 1rem;
+  background-color: black;
+  color: white;
+
+  .logo {
+    height: 80%;
+    flex-grow: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  .dropdown-icon {
+    position: absolute;
+  }
+
+  // sizing styles
+  &.nav-xs {
+    height: 20px;
+
+    .nav-option {
+      font-size: 1rem;
+    }
+
+    .full-menu .dropdown-icon {
+      top: 22.5px;
+      font-size: 1rem;
+    }
+
+    .dropdown {
+      top: 36px;
+    }
+  }
+
+  &.nav-sm {
+    height: 40px;
+
+    .nav-option {
+      font-size: 1.5rem;
+    }
+
+    .full-menu .dropdown-icon {
+      top: 35px;
+    }
+
+    .dropdown {
+      top: 56px;
+    }
+  }
+
+  
+  &.nav-md {
+    height: 60px;
+
+    .nav-option {
+      font-size: 2rem;
+    }
+
+    .full-menu .dropdown-icon {
+      top: 50px;
+    }
+
+    .dropdown {
+      top: 76px;
+    }
+  }
+
+  &.nav-lg {
+    height: 80px;
+
+    .nav-option {
+      font-size: 2.5rem;
+    }
+
+    .full-menu .dropdown-icon {
+      top: 70px;
+    }
+
+    .dropdown {
+      top: 96px;
+    }
+  }
+
+  &.nav-xl {
+    height: 100px;
+
+    .nav-option {
+      font-size: 3rem;
+    }
+
+    .full-menu .dropdown-icon {
+      top: 85px;
+    }
+
+    .dropdown {
+      top: 116px;
+    }
+  }
+
+  // desktop menu styles
+  .full-menu {
+    display: flex;
+
+    .nav-option.MuiButton-text {
+      padding: 0rem 2rem;
+      color: white;
+
+      &.selected {
+        color: #bbbbbb;
+      }
+    }
+
+    .menu-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .dropdown {
+        position: absolute;
+        display:flex;
+        flex-direction:column;
+        background-color: black;
+        align-items: flex-end;
+        z-index: 10
+      }
+    }
+  }
+
+  // mobile menu styles
+  .small-menu {
+    display: none;
+
+    .dropdown .nav-option .MuiTypography-root {
+      font-size: 1.5rem;
+    }
+
+    .dropdown:last-of-type {
+      border-bottom: solid #ddd 1px;
+    }
+
+    .dropdown-icon {
+      align-self: center;
+      top: 60px;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  .full-menu {
+    display: none!important;
+  }
+  .small-menu {
+    display: flex!important;
+  }
+}
+
