@@ -3,21 +3,23 @@ import './HomePage.scss'
 
 export const HomePage: React.FC = () => {
 
-    const animationSeconds = 3
     const [itemIndex, setItemIndex] = useState(0);
 
 
-    const scrollItems = useMemo(() => [
+    const scrollItems = [
         "a software engineer",
         "a web developer",
         "a systems architect",
         "a UX designer",
         "an API specialist"
-    ], []);
+    ]
 
     const incrementItem = (ev: React.AnimationEvent<HTMLDivElement>) => {
         setItemIndex(prevIdx =>(prevIdx+1) % scrollItems.length)
     }
+
+    const currentItem = () => scrollItems[itemIndex]
+    const nextItem = () => scrollItems[(itemIndex+1) % scrollItems.length]
 
     return (  
         <div className="HomePage">
@@ -34,8 +36,9 @@ export const HomePage: React.FC = () => {
                 <div className="text">
                     <h1>Hi there! I'm Lucy,</h1>
                     <div className="scroll-container" onAnimationIteration={incrementItem}>
-                        <div className="scroll-items" style={{animationDuration: `${animationSeconds}s`}}>
-                            <h1>{ scrollItems[itemIndex] }</h1>
+                        <div className="scroll-items">
+                            <h1>{ currentItem() }</h1>
+                            <h1>{ nextItem() }</h1>
                         </div>
 
                     </div>

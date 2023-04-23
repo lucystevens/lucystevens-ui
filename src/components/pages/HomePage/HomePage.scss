@@ -53,10 +53,11 @@
             }
 
             .scroll-container {
+                height: 80px;
                 overflow: hidden;
 
                 .scroll-items {
-                    animation: scrollText 5s infinite ease-in-out;
+                    animation: scrollText 3s infinite ease-in-out;
 
                     h1 {
                         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -97,24 +98,13 @@
 
 @keyframes scrollText {
     0% {
-        transform: translateY(100%);
-        filter: blur(5px);
-    }
-    20% {
-        filter: blur(0);
-    }
-    25% {
         transform: translateY(0%);
     }
-    75% {
+    50% {
         transform: translateY(0%);
-    }
-    80% {
-        filter: blur(0);
     }
     100% {
-        transform: translateY(-100%);
-        filter: blur(5px);
+        transform: translateY(-50%);
     }
 }
 
