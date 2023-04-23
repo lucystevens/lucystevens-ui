@@ -1,11 +1,18 @@
-import { HomePage } from 'components/pages';
+import { Outlet, Link } from "react-router-dom";
 import './App.scss';
+import React from "react";
 
-function App() {
+export const App: React.FC = () => {
 
   return (
         <div className="App">
-          <HomePage />
+            <Outlet />
+            <div className="navbar">
+                <Link to={"about"} className="navlink about">About me</Link>
+                <Link to={"services"} className="navlink services">Services</Link>
+                <Link to={"projects"} className="navlink projects">Projects</Link>
+                <Link to={"chat"} className="navlink chat">Let's Chat</Link>
+            </div>
         </div>
   );
 }

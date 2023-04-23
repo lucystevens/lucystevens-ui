@@ -1,5 +1,6 @@
 import React, {useMemo, useState} from 'react'
 import './HomePage.scss'
+import {Link} from "react-router-dom";
 
 export const HomePage: React.FC = () => {
 
@@ -23,14 +24,6 @@ export const HomePage: React.FC = () => {
 
     return (  
         <div className="HomePage">
-            <div style={{display: "none"}} className="header">
-                <h3 className="name">Lucy Stevens</h3>
-                <div className="image"
-                     style={{backgroundImage: "url('/images/lucy.png')"}}>
-                </div>
-            </div>
-
-            <div className={"filler"}></div>
 
             <div className="intro">
                 <div className="text">
@@ -48,14 +41,7 @@ export const HomePage: React.FC = () => {
                 <div className={"image"} style={{backgroundImage: "url('/images/berlin.jpg')"}}></div>
             </div>
 
-            <div className="navbar">
-                <h2 className="navlink about">About me</h2>
-                <h2 className="navlink services">Services</h2>
-                <h2 className="navlink projects">Projects</h2>
-                <h2 className="navlink chat">Let's Chat</h2>
-            </div>
-
-        </div> 
+        </div>
     );
 
 };
