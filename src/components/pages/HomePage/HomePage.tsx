@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo, useState} from 'react'
+import React, {useMemo, useState} from 'react'
 import './HomePage.scss'
 
 export const HomePage: React.FC = () => {
@@ -15,17 +15,9 @@ export const HomePage: React.FC = () => {
         "an API specialist"
     ], []);
 
-
-
-    useEffect(() => {
-        const incrementItem = () => {
-            setItemIndex(prevIdx =>(prevIdx+1) % scrollItems.length)
-        }
-        const interval = setInterval(incrementItem, animationSeconds*1000);
-        return () => {
-            clearInterval(interval);
-        };
-    }, [scrollItems]);
+    const incrementItem = (ev: React.AnimationEvent<HTMLDivElement>) => {
+        setItemIndex(prevIdx =>(prevIdx+1) % scrollItems.length)
+    }
 
     return (  
         <div className="HomePage">
@@ -41,7 +33,7 @@ export const HomePage: React.FC = () => {
             <div className="intro">
                 <div className="text">
                     <h1>Hi there! I'm Lucy,</h1>
-                    <div className="scroll-container">
+                    <div className="scroll-container" onAnimationIteration={incrementItem}>
                         <div className="scroll-items" style={{animationDuration: `${animationSeconds}s`}}>
                             <h1>{ scrollItems[itemIndex] }</h1>
                         </div>
