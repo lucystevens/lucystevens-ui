@@ -45,7 +45,7 @@
             display: flex;
             flex-grow: 1;
             aspect-ratio: 1/1;
-            max-width: 256px;
+            max-width: 500px;
 
             background-size: contain;
             background-repeat: no-repeat;
@@ -70,26 +70,19 @@
     }
 }
 
-@media (max-width: 600px) {
+// mobile
+@media (max-width: 800px) {
     .HomePage {
-        width: 100%;
-        margin: 20px;
+        width: 95%;
 
-        .profile {
-            .image {
-                width: 80px;
-                height: 80px;
-            }
-            .text {
-                max-width: 60%;
-                margin-right: 20px;
-
-                .icons {
-                    i {
-                        font-size: 20px;
-                    }
-                }
-            }
+        h1 { font-size: 2rem; }
+        h3 { font-size: 1rem; }
+        .intro {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 2rem;
+            .image { width: 50% }
+            .text .scroll-container { height: 40px }
         }
     }
 }
@@ -98,5 +91,9 @@
 @media (min-width: 2000px) {
     .HomePage {
         width: 60%;
+
+        h1 { font-size: 6rem; }
+        h3 { font-size: 3rem; }
+        .intro .text .scroll-container { height: 120px }
     }
 }

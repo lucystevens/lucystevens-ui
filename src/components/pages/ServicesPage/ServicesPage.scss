@@ -3,6 +3,7 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
+    justify-content: center;
     padding-top: 2rem;
     width: 80%;
 
@@ -33,7 +34,7 @@
     }
 
     .get-in-touch {
-        padding-top: 2rem;
+        padding-top: 4rem;
         font-size: 2rem;
         text-decoration: none;
         color: #000000;
@@ -45,9 +46,39 @@
     }
 }
 
+// mobile
+@media (max-width: 800px) {
+    .ServicesPage {
+        width: 90%;
+        .services {
+            flex-direction: column;
+            gap: 1rem;
+
+            .service {
+                padding: 1rem 0;
+                border-bottom: 1px solid #000000;
+                border-right: none;
+                width: 100%;
+
+                &.last {
+                    border-bottom: none;
+                }
+
+                i, svg { font-size: 2rem; }
+            }
+        }
+
+        .get-in-touch {
+            padding: 2rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+}
+
 // wide screen desktop
 @media (min-width: 2000px) {
-    .ProjectsPage {
+    .ServicesPage {
         width: 60%;
     }
 }
