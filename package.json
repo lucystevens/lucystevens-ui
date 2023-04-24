@@ -1,6 +1,6 @@
 {
   "name": "lucystevens-ui",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@types/node": "^14.14.32",
@@ -14,7 +14,7 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "BROWSER=none react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
