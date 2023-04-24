@@ -1,6 +1,5 @@
-import React, {useMemo, useState} from 'react'
+import React, {useState} from 'react'
 import './HomePage.scss'
-import {Link} from "react-router-dom";
 
 export const HomePage: React.FC = () => {
 
