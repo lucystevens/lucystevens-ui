@@ -1,6 +1,5 @@
 import React from 'react'
 import './ProjectsPage.scss';
-import {Link} from "react-router-dom";
 
 export const ProjectsPage: React.FC = () => {
 
@@ -30,6 +29,19 @@ export const ProjectsPage: React.FC = () => {
                 url: "https://closetbrewingproject.co.uk",
                 text: "View project",
                 icon: "fa-solid fa-arrow-up-right-from-square"
+            }
+        },
+        {
+            name: "Unity Gaming Services",
+            subtitle: "Player Engagement and Analytics tools for Gaming",
+            technologies: ["Kotlin", "Java", "Docker", "Kubernetes", "Google Cloud"],
+            description:
+                "Before going freelance, I spent almost 5 years building out best-in-class player engagement and analytics tools for Unity Technologies. " +
+                "During my time there, I worked across a whole range of disciplines, from reporting on big data in Snowflake to developing a highly available decision engine, serving targeted content to thousands of players every second.",
+            link: {
+                url: "https://dashboard.unity3d.com/gaming/login",
+                text: "Visit Unity Dashboard",
+                icon: "fa-brands fa-unity"
             }
         }
     ]

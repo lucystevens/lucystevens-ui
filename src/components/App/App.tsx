@@ -1,4 +1,4 @@
-import {Outlet, Link, useMatches, useLocation} from "react-router-dom";
+import {Outlet, Link, useLocation} from "react-router-dom";
 import './App.scss';
 import React from "react";
 
@@ -11,7 +11,7 @@ export const App: React.FC = () => {
         { to: "", text: "About me" },
         { to: "services", text: "Services" },
         { to: "projects", text: "Projects" },
-        { to: "chat", text: "Let's Chat" }
+        //{ to: "chat", text: "Let's Chat" }
     ]
 
   return (
@@ -24,6 +24,9 @@ export const App: React.FC = () => {
                         {link.text}
                     </Link>
                 )}
+                <a className="navlink" href="mailto:lcm.stevens96@gmail.com" target="_blank" rel="noreferrer">
+                    Let's Chat
+                </a>
             </div>
             <Outlet />
         </div>
