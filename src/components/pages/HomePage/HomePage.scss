@@ -28,11 +28,12 @@
             }
 
             .scroll-container {
-                height: 80px;
+                height: 94px;
                 overflow: hidden;
 
                 .scroll-items {
                     animation: scrollText 3s infinite ease-in-out;
+                    backface-visibility: hidden;
 
                     h1 {
                         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -70,6 +71,18 @@
     }
 }
 
+// small mobile
+@media (max-width: 320px) {
+    .HomePage {
+        h1 { font-size: 1.5rem!important; }
+        h3 { font-size: 0.75rem!important; }
+        .intro {
+            gap: 1rem;
+            .text .scroll-container { height: 36px!important }
+        }
+    }
+}
+
 // mobile
 @media (max-width: 800px) {
     .HomePage {
@@ -82,7 +95,7 @@
             align-items: center;
             gap: 2rem;
             .image { width: 50% }
-            .text .scroll-container { height: 40px }
+            .text .scroll-container { height: 47px }
         }
     }
 }
@@ -94,6 +107,6 @@
 
         h1 { font-size: 6rem; }
         h3 { font-size: 3rem; }
-        .intro .text .scroll-container { height: 120px }
+        .intro .text .scroll-container { height: 143px }
     }
 }
